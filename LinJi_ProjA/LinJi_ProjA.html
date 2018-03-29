@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ji Lin</title>
+    <link rel="stylesheet" type="text/css" href="ProjectA.css" >
+  </head>
+  <body onload="main()">
+     <h1>Instructions</h1>
+     <p>This is an action of dumbbell biceps curl, which is shown as the moving arm.</p>
+     <p>In addition, there is a rotating dumbbell on the up-right of the canvas.</p>
+     <p>Both of these two objects are color-changed, and the arm is also shape-changed.</p>
+    <p>To increase or decrease the rotation speed of the The Arm, use the corresponding buttons.</p>
+    <p>Click on the The arm and drag the mouse to make it rotate around the canvas.</p>
+    <p>Double Click any place on canvas could relocate the arm.</p>
+    <p>Use arrow keys to move the dumpbell around the canvas, and press s to stop the rotation of the arm.</p>
+    <p>
+    <div id="buttonGroup">
+        <button type="button" class="buttons" id="Increase the speed" onclick="moreCCW()">Increase the speed</button>
+        <button type="button" class="buttons" id="Decrease the speed" onclick="lessCCW()">Decrease the speed</button>
+        <button type="button" class="buttons" id="Help" onclick="help()">Help</button>
+        <div id="stretcher">
+        </div>
+    </div>
+      </p>
+    <canvas id="webgl" width="600" height="600">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-mod.js"></script>
+    <script src="LinJi_ProjA.js"></script>
+  </body>
+</html>

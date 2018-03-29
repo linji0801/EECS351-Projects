@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+	<meta charset = 'UTF-8'>
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/solar/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="ProjectC.css" >
+	<title> LinJi_ProjC</title>
+</head>
+
+<body onload = 'main()'>
+	<h1 > EECS 351 Project C  Blue Ocean </h1>
+
+	<div>
+		<canvas id = 'webgl'>
+			please change your browser which supports webgl
+		</canvas>
+	</div>
+
+	<div class="instructions">
+		<h1> Instructions </h1>
+		<p>Press HELP button or "F1" or "H" for help!</p>
+		<p>
+			<button type="button" onclick="help()">HELP</button>
+		</p>
+	</div>
+
+	<div class='methods'>
+		<select onchange="changeShadingMode()" id = 'modeSelection'>
+		  <option value="1">Phong lighting with Phong Shading</option>
+		  <option value="2">Blinn-Phong lighting with Phong Shading</option>
+		  <option value="3">Phong lighting with Gouraud Shading</option>
+		  <option value="4" selected="true">Blinn-Phong lighting with Gouraud Shading</option>
+		</select>
+	</div>
+	<div class="headLight">
+		<input id = "headAmbient" type="checkbox" name="ambient" value="headAmbient" checked="true"> HeadLight Ambient <br>
+		<input id = "headdiffuse" type="checkbox" name="diffuse" value="headdiffuse" checked="true"> HeadLight Diffuse <br>
+		<input id = "headspecular" type="checkbox" name="specular" value="headspecular" checked="true"> HeadLight Specular <br>
+	</div>
+
+	<div class="userLight">
+		<input id = "userAmbient" type="checkbox" name="ambient" value="userAmbient" checked="true"> UserLight Ambient
+		R: <input type="number" name="userL" value="">
+		G: <input type="number" name="userL" value="">
+		B: <input type="number" name="userL" value="">
+		<br>
+		<input id = "userdiffuse" type="checkbox" name="diffuse" value="userdiffuse" checked="true"> UserLight Diffuse
+		R: <input type="number" name="userL" value="">
+		G: <input type="number" name="userL" value="">
+		B: <input type="number" name="userL" value="">
+		<br>
+		<input id = "userspecular" type="checkbox" name="specular" value="userspecular" checked="true"> UserLight Specular
+		R: <input type="number" name="userL" value="">
+		G: <input type="number" name="userL" value="">
+		B: <input type="number" name="userL" value="">
+		<br>
+		Position:
+		X: <input type="number" name="userL" value="">
+		Y: <input type="number" name="userL" value="">
+		Z: <input type="number" name="userL" value="">
+		<br>
+		<button type="button" onclick="updateUserLight()">submit</button>
+	</div>
+	<p>For more details, please contact Ji Lin via JiLin2019@u.northwestern.edu</p>
+
+	
+
+	<!-- the last part is js includes -->
+	<script type="text/javascript" src = 'lib/cuon-matrix-mod.js'></script>
+	<script type="text/javascript" src = 'lib/cuon-matrix-quat.js'></script>
+	<script type="text/javascript" src = 'lib/cuon-matrix.js'></script>
+	<script type="text/javascript" src = 'lib/cuon-utils.js'></script>
+	<script type="text/javascript" src = 'lib/webgl-debug.js'></script>
+	<script type="text/javascript" src = 'lib/webgl-utils.js'></script>
+	<script type='text/javascript' src = 'lights-JT.js'></script>
+	<script type="text/javascript" src = 'materials_Ayerdi.js'></script>
+	<script type="text/javascript" src = 'LinJi_ProjC.js'></script>
+</body>
+
+</html>
